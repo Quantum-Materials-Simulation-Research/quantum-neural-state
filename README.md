@@ -4,7 +4,7 @@
 
 <p align="center">
   <a href="https://Quantum-Materials-Simulation-Research.github.io/quantum-neural-state">
-    <img src=".github/readme/hero.svg?v=2026-01-08T00:04:50.052719Z" width="100%" alt="Access the course website" />
+    <img src=".github/readme/hero.svg?v=2026-01-08T10:21:21.600772Z" width="100%" alt="Access the course website" />
   </a>
 </p>
 
