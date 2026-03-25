@@ -1,0 +1,10 @@
+pyscf 
+openfermion 
+openfermionpyscf
+matplotlib
+wurlitzer
+ipykernel
+PubChemPy
+dask 
+dask-jobqueue
+remote_ikernel
