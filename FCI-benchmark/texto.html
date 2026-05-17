@@ -13497,7 +13497,7 @@ div#notebook {
 <main>
 <div class="border-box-sizing" id="notebook" tabindex="-1">
 <div class="container" id="notebook-container">
-<div class="cell border-box-sizing text_cell rendered" id="cell-id=d2c2abad"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered" id="cell-id=9b6d62aa"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Jupyter-Notebook:-Implementa%C3%A7%C3%A3o-do-M%C3%A9todo-Full-CI">Jupyter Notebook: Implementação do Método Full CI<a class="anchor-link" href="#Jupyter-Notebook:-Implementa%C3%A7%C3%A3o-do-M%C3%A9todo-Full-CI">¶</a></h1><p>Este notebook explica e demonstra o cálculo da energia do estado fundamental de moléculas simples usando o método de <strong>Interação de Configuração Completa (Full CI)</strong>.</p>
@@ -13520,7 +13520,7 @@ $$ \Psi_{FCI} = c_0 \Psi_{HF} + \sum_{i,a} c_i^a \Phi_i^a + \sum_{i&lt;j, a&lt;b
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered" id="cell-id=e4c5ed4b"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered" id="cell-id=a8eda24a"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="1.-Configura%C3%A7%C3%A3o-do-Ambiente">1. Configuração do Ambiente<a class="anchor-link" href="#1.-Configura%C3%A7%C3%A3o-do-Ambiente">¶</a></h2><p>Vamos usar a biblioteca <code>pyscf</code> (Python-based Simulations of Chemistry Framework), que é uma biblioteca poderosa e fácil de usar para cálculos de química quântica. Ela possui resolvedores HF e FCI integrados.</p>
@@ -13528,7 +13528,7 @@ $$ \Psi_{FCI} = c_0 \Psi_{HF} + \sum_{i,a} c_i^a \Phi_i^a + \sum_{i&lt;j, a&lt;b
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered" id="cell-id=6f3bfa92">
+<div class="cell border-box-sizing code_cell rendered" id="cell-id=96fcb15c">
 <div class="input">
 <div class="prompt input_prompt">In [12]:</div>
 <div class="inner_cell">
@@ -13554,7 +13554,7 @@ Requirement already satisfied: setuptools in /Users/nara/Repository/Attention/Sa
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered" id="cell-id=d9e458d5">
+<div class="cell border-box-sizing code_cell rendered" id="cell-id=a287871a">
 <div class="input">
 <div class="prompt input_prompt">In [13]:</div>
 <div class="inner_cell">
@@ -13567,7 +13567,7 @@ Requirement already satisfied: setuptools in /Users/nara/Repository/Attention/Sa
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered" id="cell-id=72144b89"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered" id="cell-id=e4b2a128"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="2.-Definindo-o-Sistema:-H%E2%82%82-na-base-STO-3G">2. Definindo o Sistema: H₂ na base STO-3G<a class="anchor-link" href="#2.-Definindo-o-Sistema:-H%E2%82%82-na-base-STO-3G">¶</a></h2><p>Vamos usar o sistema mais simples possível que exibe correlação: a molécula de $H_2$ em uma base mínima (STO-3G).</p>
@@ -13579,7 +13579,7 @@ Requirement already satisfied: setuptools in /Users/nara/Repository/Attention/Sa
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered" id="cell-id=ea915cfe">
+<div class="cell border-box-sizing code_cell rendered" id="cell-id=87df3ba1">
 <div class="input">
 <div class="prompt input_prompt">In [14]:</div>
 <div class="inner_cell">
@@ -13607,14 +13607,14 @@ Requirement already satisfied: setuptools in /Users/nara/Repository/Attention/Sa
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered" id="cell-id=85f56ffb"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered" id="cell-id=feae4805"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="3.-O-%22Caminho-F%C3%A1cil%22:-Usando-o-resolvedor-FCI-do-PySCF">3. O "Caminho Fácil": Usando o resolvedor FCI do PySCF<a class="anchor-link" href="#3.-O-%22Caminho-F%C3%A1cil%22:-Usando-o-resolvedor-FCI-do-PySCF">¶</a></h2><p>Primeiro, vamos calcular a energia de Hartree-Fock (HF) para ter uma referência. Depois, usaremos o resolvedor FCI integrado do <code>pyscf</code>.</p>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered" id="cell-id=fe86b1ad">
+<div class="cell border-box-sizing code_cell rendered" id="cell-id=58737889">
 <div class="input">
 <div class="prompt input_prompt">In [15]:</div>
 <div class="inner_cell">
@@ -13640,7 +13640,7 @@ Energia Hartree-Fock (RHF): -1.11675931 Hartrees
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered" id="cell-id=f9876233">
+<div class="cell border-box-sizing code_cell rendered" id="cell-id=e128a628">
 <div class="input">
 <div class="prompt input_prompt">In [4]:</div>
 <div class="inner_cell">
@@ -13675,7 +13675,7 @@ Energia de Correlação:      -0.02052453 Hartrees
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered" id="cell-id=038de2f0"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered" id="cell-id=84146fd6"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="4.-O-%22Caminho-Pedag%C3%B3gico%22:-Implementando-o-FCI-manualmente">4. O "Caminho Pedagógico": Implementando o FCI manualmente<a class="anchor-link" href="#4.-O-%22Caminho-Pedag%C3%B3gico%22:-Implementando-o-FCI-manualmente">¶</a></h2><p>Para o $H_2$ na base STO-3G, temos 2 elétrons em 2 orbitais espaciais (o HOMO, orbital 0; e o LUMO, orbital 1).</p>
@@ -13697,7 +13697,7 @@ $$ \Psi_{FCI} = c_1 |\Phi_1\rangle + c_2 |\Phi_2\rangle $$</p>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered" id="cell-id=7f5e1911"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered" id="cell-id=62d8c6ea"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="4.1.-Obtendo-as-Integrais-na-Base-MO">4.1. Obtendo as Integrais na Base MO<a class="anchor-link" href="#4.1.-Obtendo-as-Integrais-na-Base-MO">¶</a></h3><p>Precisamos:</p>
@@ -13709,7 +13709,7 @@ $$ \Psi_{FCI} = c_1 |\Phi_1\rangle + c_2 |\Phi_2\rangle $$</p>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered" id="cell-id=4c390a09">
+<div class="cell border-box-sizing code_cell rendered" id="cell-id=634df7ef">
 <div class="input">
 <div class="prompt input_prompt">In [5]:</div>
 <div class="inner_cell">
@@ -13764,7 +13764,7 @@ Dimensão de g_mo: (2, 2, 2, 2)
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered" id="cell-id=975f2eab"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered" id="cell-id=10df1737"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="4.2.-Construindo-a-Matriz-CI-(2x2)">4.2. Construindo a Matriz CI (2x2)<a class="anchor-link" href="#4.2.-Construindo-a-Matriz-CI-(2x2)">¶</a></h3><p>Usando as <strong>regras de Slater-Condon</strong>, podemos definir os elementos da matriz $H$:</p>
@@ -13794,7 +13794,7 @@ $H_{12} = (00|11) = g_{0011}$</p>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered" id="cell-id=bc4ae3f3">
+<div class="cell border-box-sizing code_cell rendered" id="cell-id=6fed1842">
 <div class="input">
 <div class="prompt input_prompt">In [6]:</div>
 <div class="inner_cell">
@@ -13842,7 +13842,7 @@ $H_{12} = (00|11) = g_{0011}$</p>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered" id="cell-id=28c98cab"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered" id="cell-id=aba9edc5"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="4.3.-Diagonalizando-a-Matriz-e-Obtendo-a-Energia">4.3. Diagonalizando a Matriz e Obtendo a Energia<a class="anchor-link" href="#4.3.-Diagonalizando-a-Matriz-e-Obtendo-a-Energia">¶</a></h3><p>Os autovalores desta matriz $H_{CI}$ são as <em>energias eletrônicas</em>.</p>
@@ -13850,7 +13850,7 @@ $H_{12} = (00|11) = g_{0011}$</p>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered" id="cell-id=99ff6a15">
+<div class="cell border-box-sizing code_cell rendered" id="cell-id=29568e99">
 <div class="input">
 <div class="prompt input_prompt">In [7]:</div>
 <div class="inner_cell">
@@ -13890,14 +13890,14 @@ Energia FCI (Manual 2x2):   -1.35863304 Hartrees
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered" id="cell-id=2a19fca6"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered" id="cell-id=56ab2de2"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="5.-Compara%C3%A7%C3%A3o-dos-Resultados">5. Comparação dos Resultados<a class="anchor-link" href="#5.-Compara%C3%A7%C3%A3o-dos-Resultados">¶</a></h2><p>Vamos comparar a energia FCI obtida pelo resolvedor automático do <code>pyscf</code> (que diagonalizou a matriz $N \times N$ completa) com a nossa implementação manual (que usou simetria para reduzir o problema a uma matriz $2 \times 2$).</p>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered" id="cell-id=6269ecf4">
+<div class="cell border-box-sizing code_cell rendered" id="cell-id=eb509696">
 <div class="input">
 <div class="prompt input_prompt">In [8]:</div>
 <div class="inner_cell">
@@ -13925,7 +13925,7 @@ Diferença:              2.21e-01
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered" id="cell-id=b450527d"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered" id="cell-id=4fc105cd"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="6.-O-Problema-da-Escalabilidade-(A-Maldi%C3%A7%C3%A3o-Fatorial)">6. O Problema da Escalabilidade (A Maldição Fatorial)<a class="anchor-link" href="#6.-O-Problema-da-Escalabilidade-(A-Maldi%C3%A7%C3%A3o-Fatorial)">¶</a></h2><p>Para o $H_2$ STO-3G (2 elétrons, 4 orbitais de spin), o espaço total FCI é $\binom{4}{2} = 6$ determinantes. Focando no singlete $M_s=0$, reduzimos para um espaço menor (e, como vimos, para uma matriz $2 \times 2$ relevante).</p>
@@ -13933,7 +13933,7 @@ Diferença:              2.21e-01
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered" id="cell-id=7c0401fd">
+<div class="cell border-box-sizing code_cell rendered" id="cell-id=ed8f2451">
 <div class="input">
 <div class="prompt input_prompt">In [9]:</div>
 <div class="inner_cell">
@@ -13994,7 +13994,7 @@ Isto significa diagonalizar uma matriz 441 x 441!
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered" id="cell-id=b29607b2">
+<div class="cell border-box-sizing code_cell rendered" id="cell-id=dc0f817d">
 <div class="input">
 <div class="prompt input_prompt">In [10]:</div>
 <div class="inner_cell">
@@ -14025,14 +14025,14 @@ Correlação (H₂O):  -0.04958399
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered" id="cell-id=d7ef567c"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered" id="cell-id=3478de25"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="6.1.-O-que-acontece-com-uma-base-maior?">6.1. O que acontece com uma base maior?<a class="anchor-link" href="#6.1.-O-que-acontece-com-uma-base-maior?">¶</a></h3><p>E se usarmos uma base um pouco melhor, como <strong>6-31G</strong> para a água?</p>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered" id="cell-id=f8ec5c16">
+<div class="cell border-box-sizing code_cell rendered" id="cell-id=6a7ba4d7">
 <div class="input">
 <div class="prompt input_prompt">In [11]:</div>
 <div class="inner_cell">
@@ -14081,7 +14081,7 @@ Diagonalizar isso é extremamente caro e lento.
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered" id="cell-id=d5f4e9b6"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered" id="cell-id=b26a6d6d"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="7.-Conclus%C3%A3o">7. Conclusão<a class="anchor-link" href="#7.-Conclus%C3%A3o">¶</a></h2><p>O método Full CI fornece a <strong>solução exata</strong> da equação de Schrödinger eletrônica dentro de um determinado conjunto de bases. Ele é o <em>benchmark</em> (padrão de ouro) pelo qual todos os outros métodos de correlação (como MP2, CCSD, CCSD(T)) são medidos.</p>
