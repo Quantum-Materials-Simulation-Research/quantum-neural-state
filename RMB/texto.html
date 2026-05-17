@@ -13497,7 +13497,7 @@ div#notebook {
 <main>
 <div class="border-box-sizing" id="notebook" tabindex="-1">
 <div class="container" id="notebook-container">
-<div class="cell border-box-sizing text_cell rendered" id="cell-id=0bd781fd"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered" id="cell-id=37533b6e"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Implementando-uma-RBM-para-o-Estado-Fundamental-do-H%E2%82%82">Implementando uma RBM para o Estado Fundamental do H₂<a class="anchor-link" href="#Implementando-uma-RBM-para-o-Estado-Fundamental-do-H%E2%82%82">¶</a></h1><p>Este notebook demonstra como usar uma <strong>Restricted Boltzmann Machine (RBM)</strong> como uma <em>Função de Onda de Ansatz</em> (Neural Quantum State) para encontrar a energia do estado fundamental da molécula $H_2$.</p>
@@ -13510,14 +13510,14 @@ div#notebook {
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered" id="cell-id=2fa1e57a"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered" id="cell-id=5e552239"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Passo-1:-Instala%C3%A7%C3%A3o-das-Bibliotecas">Passo 1: Instalação das Bibliotecas<a class="anchor-link" href="#Passo-1:-Instala%C3%A7%C3%A3o-das-Bibliotecas">¶</a></h2>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered" id="cell-id=690e6c50">
+<div class="cell border-box-sizing code_cell rendered" id="cell-id=ef6a2641">
 <div class="input">
 <div class="prompt input_prompt">In [1]:</div>
 <div class="inner_cell">
@@ -13545,7 +13545,7 @@ Requirement already satisfied: openfermion in /Users/nara/Repository/Attention/S
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered" id="cell-id=72b27eeb">
+<div class="cell border-box-sizing code_cell rendered" id="cell-id=6a62f53f">
 <div class="input">
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
@@ -13571,7 +13571,7 @@ Requirement already satisfied: openfermion in /Users/nara/Repository/Attention/S
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered" id="cell-id=d19b8d45"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered" id="cell-id=b7daa17b"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Passo-2:-Obter-o-Hamiltoniano-(com-PySCF)">Passo 2: Obter o Hamiltoniano (com PySCF)<a class="anchor-link" href="#Passo-2:-Obter-o-Hamiltoniano-(com-PySCF)">¶</a></h2><p>Primeiro, definimos nossa molécula H₂ na base <code>sto-3g</code>, exatamente como no notebook FCI. Isso nos dá 2 elétrons em 4 orbitais de spin.</p>
@@ -13579,7 +13579,7 @@ Requirement already satisfied: openfermion in /Users/nara/Repository/Attention/S
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered" id="cell-id=9638e2d1">
+<div class="cell border-box-sizing code_cell rendered" id="cell-id=91532e11">
 <div class="input">
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
@@ -13612,14 +13612,14 @@ Requirement already satisfied: openfermion in /Users/nara/Repository/Attention/S
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered" id="cell-id=a834b67b"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered" id="cell-id=f2d3b356"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Passo-3:-Definir-o-Problema-no-NetKet">Passo 3: Definir o Problema no NetKet<a class="anchor-link" href="#Passo-3:-Definir-o-Problema-no-NetKet">¶</a></h2><p>Agora, passamos o problema para o NetKet.</p>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered" id="cell-id=5434989a">
+<div class="cell border-box-sizing code_cell rendered" id="cell-id=9c55a7a0">
 <div class="input">
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
@@ -13666,14 +13666,14 @@ Requirement already satisfied: openfermion in /Users/nara/Repository/Attention/S
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered" id="cell-id=b234d0ea"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered" id="cell-id=27f7b523"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Passo-4:-Definir-o-Modelo-(a-RBM)">Passo 4: Definir o Modelo (a RBM)<a class="anchor-link" href="#Passo-4:-Definir-o-Modelo-(a-RBM)">¶</a></h2><p>Definimos a arquitetura da RBM. A RBM padrão do NetKet funciona bem. O hiperparâmetro <code>alpha</code> controla quão "complexa" (quantos neurônios ocultos) a RBM é. <code>alpha=1</code> significa 1 neurônio oculto por neurônio visível.</p>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered" id="cell-id=5b161f3f">
+<div class="cell border-box-sizing code_cell rendered" id="cell-id=642ab868">
 <div class="input">
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
@@ -13708,14 +13708,14 @@ Requirement already satisfied: openfermion in /Users/nara/Repository/Attention/S
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered" id="cell-id=7693a00a"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered" id="cell-id=8c5d87be"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Passo-5:-Rodar-a-Otimiza%C3%A7%C3%A3o">Passo 5: Rodar a Otimização<a class="anchor-link" href="#Passo-5:-Rodar-a-Otimiza%C3%A7%C3%A3o">¶</a></h2><p>Treinamos a RBM para 300 épocas e salvamos a energia a cada passo.</p>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered" id="cell-id=df5c6f39">
+<div class="cell border-box-sizing code_cell rendered" id="cell-id=3ee52505">
 <div class="input">
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
@@ -13734,14 +13734,14 @@ Requirement already satisfied: openfermion in /Users/nara/Repository/Attention/S
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered" id="cell-id=f2ecaa88"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered" id="cell-id=f609c6e0"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Passo-6:-An%C3%A1lise-dos-Resultados">Passo 6: Análise dos Resultados<a class="anchor-link" href="#Passo-6:-An%C3%A1lise-dos-Resultados">¶</a></h2><p>Comparamos a energia que a RBM encontrou com a energia exata do Full CI.</p>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered" id="cell-id=6890f190">
+<div class="cell border-box-sizing code_cell rendered" id="cell-id=bbdf272b">
 <div class="input">
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
@@ -13758,7 +13758,7 @@ Requirement already satisfied: openfermion in /Users/nara/Repository/Attention/S
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered" id="cell-id=121ec50d">
+<div class="cell border-box-sizing code_cell rendered" id="cell-id=96d54490">
 <div class="input">
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
