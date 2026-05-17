@@ -13248,33 +13248,32 @@ div#notebook {
             margin: 2px;
             border-radius: 14px;
             background: var(--block-bg, #f7f7f7);
-            border-left: 5px solid var(--block-border, #555);
             overflow: hidden;
         }
 
         .math-block.theorem {
             --block-border: #2563eb;
-            --block-bg: #eff6ff;
+            --block-bg: #f8fafc;
         }
 
         .math-block.definition {
             --block-border: #0f766e;
-            --block-bg: #ecfdf5;
+            --block-bg: #f8fafc;
         }
 
         .math-block.lemma {
             --block-border: #7c3aed;
-            --block-bg: #f5f3ff;
+            --block-bg: #f8fafc;
         }
 
         .math-block.corollary {
             --block-border: #d97706;
-            --block-bg: #fffbeb;
+            --block-bg: #f8fafc;
         }
 
         .math-block.axiom {
             --block-border: #be123c;
-            --block-bg: #fff1f2;
+            --block-bg: #f8fafc;
         }
 
         .math-block.proposition {
@@ -13284,12 +13283,22 @@ div#notebook {
 
         .math-block.example {
             --block-border: #0891b2;
-            --block-bg: #ecfeff;
+            --block-bg: #f8fafc;
         }
 
         .math-block.remark {
             --block-border: #334155;
-            --block-bg: #f1f5f9;
+            --block-bg: #f8fafc;
+        }
+
+        .math-block.result {
+            --block-border: #9333ea;
+            --block-bg: #f8fafc;
+        }
+
+        .math-block.postulate {
+            --block-border: #b45309;
+            --block-bg: #f8fafc;
         }
 
         .math-block summary,
@@ -13312,8 +13321,10 @@ div#notebook {
         }
 
         .proof-content {
+            margin: 0 26px 22px 26px;
             padding: 22px 26px;
-            border-top: 1px solid rgba(0,0,0,0.12);
+            border: 1px solid rgba(0,0,0,0.12);
+            border-radius: 12px;
             background: white;
         }
 
@@ -13328,7 +13339,7 @@ div#notebook {
         }
 
         .math-index {
-            margin: 2px;
+            margin: 0px 2px 6px 2px;
             padding: 22px 26px;
             border-radius: 16px;
             background: #f8fafc;
@@ -13380,21 +13391,25 @@ div#notebook {
             font-size: 0.95em;
         }
 
+        .math-block-footer {
+            padding: 5px 26px 10px 26px;
+            background: rgba(255,255,255,0.55);
+        }
+
         .math-block-links {
-            margin-top: 18px;
-            padding-top: 10px;
-            border-top: 1px solid rgba(0,0,0,0.08);
+            padding-top: 0px;
             font-size: 0.85em;
-            opacity: 0.72;
             text-align: right;
+            color: #cbd5e1;
         }
 
         .math-block-links a {
-            color: inherit;
+            color: #94a3b8;
             text-decoration: none;
         }
 
         .math-block-links a:hover {
+            color: #64748b;
             text-decoration: underline;
         }
 
@@ -13432,22 +13447,6 @@ div#notebook {
             padding-bottom: 0 !important;
         }
 
-        .math-block.result {
-            --block-border: #9333ea;
-            --block-bg: #faf5ff;
-        }
-        .math-block-details {
-            padding: 14px 26px 18px 26px;
-            border-top: 1px solid rgba(0,0,0,0.10);
-            background: rgba(255,255,255,0.55);
-        }
-
-        .math-block-details .math-block-links {
-            margin-top: 0;
-            padding-top: 0;
-            border-top: none;
-        }
-
         .math-number {
             color: #94a3b8;
             font-size: 0.82em;
@@ -13455,9 +13454,42 @@ div#notebook {
             letter-spacing: 0.02em;
         }
 
-        .math-block.postulate {
-            --block-border: #b45309;
-            --block-bg: #fff7ed;
+        .math-block-summary {
+            padding: 18px 26px 24px 26px;
+        }
+
+        /* título do card vira metadado discreto */
+        .math-block-summary h1,
+        .math-block-summary h2,
+        .math-block-summary h3,
+        .math-block-summary h4 {
+            margin: 0 0 14px 0 !important;
+            padding: 0 !important;
+
+            font-size: 0.95rem !important;
+            line-height: 1.2 !important;
+            font-weight: 600 !important;
+            letter-spacing: 0.04em;
+
+            color: var(--block-border, #64748b) !important;
+            opacity: 0.72;
+
+            text-transform: uppercase;
+            text-indent: 0 !important;
+        }
+
+        .math-number {
+            color: inherit;
+            font-size: inherit;
+            font-weight: inherit;
+            letter-spacing: inherit;
+        }
+
+        /* equações ganham prioridade visual */
+        .math-block-summary .MathJax_Display,
+        .math-block-summary mjx-container[display="true"] {
+            margin: 1.1rem 0 0.6rem 0 !important;
+            font-size: 1.08em;
         }
         </style>
 </head>
@@ -13465,7 +13497,7 @@ div#notebook {
 <main>
 <div class="border-box-sizing" id="notebook" tabindex="-1">
 <div class="container" id="notebook-container">
-<div class="cell border-box-sizing text_cell rendered" id="cell-id=1ec1189b"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered" id="cell-id=9deb5bc5"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Implementando-uma-RBM-para-o-Estado-Fundamental-do-H%E2%82%82">Implementando uma RBM para o Estado Fundamental do H₂<a class="anchor-link" href="#Implementando-uma-RBM-para-o-Estado-Fundamental-do-H%E2%82%82">¶</a></h1><p>Este notebook demonstra como usar uma <strong>Restricted Boltzmann Machine (RBM)</strong> como uma <em>Função de Onda de Ansatz</em> (Neural Quantum State) para encontrar a energia do estado fundamental da molécula $H_2$.</p>
@@ -13478,14 +13510,14 @@ div#notebook {
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered" id="cell-id=d042ec13"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered" id="cell-id=e0310d3c"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Passo-1:-Instala%C3%A7%C3%A3o-das-Bibliotecas">Passo 1: Instalação das Bibliotecas<a class="anchor-link" href="#Passo-1:-Instala%C3%A7%C3%A3o-das-Bibliotecas">¶</a></h2>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered" id="cell-id=2a37cb60">
+<div class="cell border-box-sizing code_cell rendered" id="cell-id=1303defa">
 <div class="input">
 <div class="prompt input_prompt">In [1]:</div>
 <div class="inner_cell">
@@ -13513,7 +13545,7 @@ Requirement already satisfied: openfermion in /Users/nara/Repository/Attention/S
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered" id="cell-id=1485fe6b">
+<div class="cell border-box-sizing code_cell rendered" id="cell-id=93cedc35">
 <div class="input">
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
@@ -13539,7 +13571,7 @@ Requirement already satisfied: openfermion in /Users/nara/Repository/Attention/S
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered" id="cell-id=5665f7a4"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered" id="cell-id=6dabb0a6"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Passo-2:-Obter-o-Hamiltoniano-(com-PySCF)">Passo 2: Obter o Hamiltoniano (com PySCF)<a class="anchor-link" href="#Passo-2:-Obter-o-Hamiltoniano-(com-PySCF)">¶</a></h2><p>Primeiro, definimos nossa molécula H₂ na base <code>sto-3g</code>, exatamente como no notebook FCI. Isso nos dá 2 elétrons em 4 orbitais de spin.</p>
@@ -13547,7 +13579,7 @@ Requirement already satisfied: openfermion in /Users/nara/Repository/Attention/S
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered" id="cell-id=1bfb8d77">
+<div class="cell border-box-sizing code_cell rendered" id="cell-id=c6bd6cf2">
 <div class="input">
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
@@ -13580,14 +13612,14 @@ Requirement already satisfied: openfermion in /Users/nara/Repository/Attention/S
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered" id="cell-id=de8b6e8c"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered" id="cell-id=895ff471"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Passo-3:-Definir-o-Problema-no-NetKet">Passo 3: Definir o Problema no NetKet<a class="anchor-link" href="#Passo-3:-Definir-o-Problema-no-NetKet">¶</a></h2><p>Agora, passamos o problema para o NetKet.</p>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered" id="cell-id=19818be6">
+<div class="cell border-box-sizing code_cell rendered" id="cell-id=412ffe47">
 <div class="input">
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
@@ -13634,14 +13666,14 @@ Requirement already satisfied: openfermion in /Users/nara/Repository/Attention/S
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered" id="cell-id=3d8c9802"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered" id="cell-id=1f60c9b8"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Passo-4:-Definir-o-Modelo-(a-RBM)">Passo 4: Definir o Modelo (a RBM)<a class="anchor-link" href="#Passo-4:-Definir-o-Modelo-(a-RBM)">¶</a></h2><p>Definimos a arquitetura da RBM. A RBM padrão do NetKet funciona bem. O hiperparâmetro <code>alpha</code> controla quão "complexa" (quantos neurônios ocultos) a RBM é. <code>alpha=1</code> significa 1 neurônio oculto por neurônio visível.</p>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered" id="cell-id=0434a507">
+<div class="cell border-box-sizing code_cell rendered" id="cell-id=45c45dd2">
 <div class="input">
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
@@ -13676,14 +13708,14 @@ Requirement already satisfied: openfermion in /Users/nara/Repository/Attention/S
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered" id="cell-id=ba1c0f28"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered" id="cell-id=e83b5b50"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Passo-5:-Rodar-a-Otimiza%C3%A7%C3%A3o">Passo 5: Rodar a Otimização<a class="anchor-link" href="#Passo-5:-Rodar-a-Otimiza%C3%A7%C3%A3o">¶</a></h2><p>Treinamos a RBM para 300 épocas e salvamos a energia a cada passo.</p>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered" id="cell-id=545eb62e">
+<div class="cell border-box-sizing code_cell rendered" id="cell-id=1105b264">
 <div class="input">
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
@@ -13702,14 +13734,14 @@ Requirement already satisfied: openfermion in /Users/nara/Repository/Attention/S
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered" id="cell-id=beba1d3d"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered" id="cell-id=e7a5fd03"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Passo-6:-An%C3%A1lise-dos-Resultados">Passo 6: Análise dos Resultados<a class="anchor-link" href="#Passo-6:-An%C3%A1lise-dos-Resultados">¶</a></h2><p>Comparamos a energia que a RBM encontrou com a energia exata do Full CI.</p>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered" id="cell-id=374257a2">
+<div class="cell border-box-sizing code_cell rendered" id="cell-id=4a0a815b">
 <div class="input">
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
@@ -13726,7 +13758,7 @@ Requirement already satisfied: openfermion in /Users/nara/Repository/Attention/S
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered" id="cell-id=1bf3fcc6">
+<div class="cell border-box-sizing code_cell rendered" id="cell-id=5cbe12a9">
 <div class="input">
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
