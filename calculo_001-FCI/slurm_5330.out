@@ -1,0 +1,68 @@
+Criando ambiente virtual...
+Instalando dependências...
+Collecting pip
+  Using cached https://files.pythonhosted.org/packages/8a/6a/19e9fe04fca059ccf770861c7d5721ab4c2aebc539889e97c7977528a53b/pip-24.0-py3-none-any.whl
+Installing collected packages: pip
+  Found existing installation: pip 19.0.3
+    Uninstalling pip-19.0.3:
+      Successfully uninstalled pip-19.0.3
+Successfully installed pip-24.0
+Collecting pyscf (from -r requirements.txt (line 1))
+  Using cached pyscf-2.10.0-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.4 kB)
+Collecting filelock (from -r requirements.txt (line 2))
+  Using cached filelock-3.12.2-py3-none-any.whl.metadata (2.7 kB)
+Collecting numpy!=1.16,!=1.17,>=1.13 (from pyscf->-r requirements.txt (line 1))
+  Using cached numpy-1.21.6-cp37-cp37m-manylinux_2_12_x86_64.manylinux2010_x86_64.whl.metadata (2.1 kB)
+Collecting scipy>=1.6.0 (from pyscf->-r requirements.txt (line 1))
+  Using cached scipy-1.7.3-cp37-cp37m-manylinux_2_12_x86_64.manylinux2010_x86_64.whl.metadata (2.2 kB)
+Collecting h5py>=2.7 (from pyscf->-r requirements.txt (line 1))
+  Using cached h5py-3.8.0-cp37-cp37m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.5 kB)
+Requirement already satisfied: setuptools in ./venv_fci/lib/python3.7/site-packages (from pyscf->-r requirements.txt (line 1)) (40.8.0)
+Using cached pyscf-2.10.0-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (51.2 MB)
+Using cached filelock-3.12.2-py3-none-any.whl (10 kB)
+Using cached h5py-3.8.0-cp37-cp37m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (4.3 MB)
+Using cached numpy-1.21.6-cp37-cp37m-manylinux_2_12_x86_64.manylinux2010_x86_64.whl (15.7 MB)
+Using cached scipy-1.7.3-cp37-cp37m-manylinux_2_12_x86_64.manylinux2010_x86_64.whl (38.1 MB)
+Installing collected packages: numpy, filelock, scipy, h5py, pyscf
+Successfully installed filelock-3.12.2 h5py-3.8.0 numpy-1.21.6 pyscf-2.10.0 scipy-1.7.3
+Iniciando cálculos FCI paralelos...
+CPUs disponiveis para esse processo:  48
+Multiprocessing detecta: 48
+converged SCF energy = -1.11675930739643
+converged SCF energy = -455.134496044868
+converged SCF energy = -393.972628020861
+converged SCF energy = -39.7267242409405
+converged SCF energy = -147.631655286561
+converged SCF energy = -461.991315357367
+converged SCF energy = -15.561278032308
+converged SCF energy = -7.86186476980866
+converged SCF energy = -74.9458851008288
+converged SCF energy = -55.4510958974569
+converged SCF energy = -107.496500511798
+converged SCF energy = -195.967958741714
+converged SCF energy = -74.4907296652458
+converged SCF energy = -38.3663772324
+converged SCF energy = -112.997435050522
+converged SCF energy = -338.113146902632
+converged SCF energy = -105.368886426602
+converged SCF energy = -112.191430299846
+✅ H2calculado com sucesso
+✅ HClcalculado com sucesso
+✅ F2calculado com sucesso
+✅ LiHcalculado com sucesso
+✅ H2Ocalculado com sucesso
+✅ H2Scalculado com sucesso
+✅ CH2calculado com sucesso
+✅ CH4calculado com sucesso
+✅ O2calculado com sucesso
+✅ NH3calculado com sucesso
+✅ BeH2calculado com sucesso
+✅ N2calculado com sucesso
+✅ PH3calculado com sucesso
+✅ C2calculado com sucesso
+✅ LiFcalculado com sucesso
+✅ CH2Ocalculado com sucesso
+✅ CH4Ocalculado com sucesso
+✅ LiClcalculado com sucesso
+Limpando ambiente virtual...
+Job finalizado em Seg Jul 28 18:20:46 -03 2025

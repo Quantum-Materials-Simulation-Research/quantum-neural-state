@@ -1,0 +1,4 @@
+  File "calcular_fci_paralelo.py", line 75
+    pool.map(calcula_fci, moleculas)i
+                                    ^
+SyntaxError: invalid syntax
